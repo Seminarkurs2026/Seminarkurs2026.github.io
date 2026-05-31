@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kultur & Gesellschaft</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+      background: black;
+      color: white;
+    }
+
+    .presentation {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.5s ease;
+      pointer-events: none;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+
+    p, li {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+
+    ul {
+      margin-left: 30px;
+      margin-top: 20px;
+      max-width: 1000px;
+    }
+
+    .slide-number {
+      position:absolute;
+    top:20px;
+    right:auto;
+    left:25px;
+    }
+
+    .next-btn {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      padding: 15px 30px;
+      border-radius: 12px;
+      border: 2px solid white;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .next-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .dark-box {
+      background: rgba(0,0,0,0.45);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 1100px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* hier hintergrund 1 */
+    .bg1 {
+      background-image: url(Bilder/Kultur.png);
+    }
+
+    /* hier hintergrund 2 */
+    .bg2 {
+      background-image: url(Bilder/Titelfolie.png);
+    }
+
+    /* hier hintergrund 3 */
+    .bg3 {
+      background-image: url(Bilder/Inhalt_dunkel-blau2.png);
+    }
+
+    /* hier hintergrund 4 */
+    .bg4 {
+      background-image: url(Bilder/Glob.png);
+    }
+
+    /* hier hintergrund 5 */
+    .bg5 {
+      background-image: url(Bilder/Digital.png);
+    }
+
+    /* hier hintergrund 6 */
+    .bg6 {
+      background-image: url(Bilder/Inhalt_grün.png);
+    }
+
+    /* hier hintergrund 7 */
+    .bg7 {
+      background-image: url(Bilder/Image7.jpg);
+    }
+
+    /* hier hintergrund 8 */
+    .bg8 {
+      background-image: url(Bilder/Inhalt_lila.png);
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p, li {
+        font-size: 1.1rem;
+      }
+
+      .slide {
+        padding: 35px;
+      }
+    }
+
+    .home-btn{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    padding:12px 24px;
+
+    border:none;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.3s ease;
+    z-index:1001;
+
+    border:2px solid rgba(255,255,255,0.4);
+}
+
+.home-btn:hover{
+    transform:scale(1.05);
+    background:white;
+    color:black;
+}
+  </style>
+</head>
+<body>
+
+<div class="presentation">
+
+    <button class="home-btn" onclick="window.location.href='index.html'">
+    🏠 Home
+    </button>
+
+  <section class="slide bg1 active">
+    <div class="slide-number">1 / 8</div>
+    <div class="dark-box">
+      <h1>Kultur & Gesellschaft</h1>
+    </div>
+  </section>
+
+  <section class="slide bg2">
+    <div class="slide-number">2 / 8</div>
+    <div class="dark-box">
+      <h2>Was bedeutet Kultur?</h2>
+      <ul>
+        <li>Kultur umfasst Sprache, Kunst, Musik, Werte & Traditionen</li>
+        <li>Sie prägt Denken & Verhalten</li>
+        <li>Kultur verändert sich dauernd</li>
+        <li>Vielfalt stärkt Kreativität & Innovation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg3">
+    <div class="slide-number">3 / 8</div>
+    <div class="dark-box">
+      <h2>Die Gesellschaft im Wandel</h2>
+      <ul>
+        <li>Digitalisierung verändert die Kommunikation im Alltag</li>
+        <li>Soziale Medien beeinflussen Meinungen & Beziehungen</li>
+        <li>Neue Arbeits- & Lebensformen entstehen</li>
+        <li>Gesellschaft wird globaler & vernetzter</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg4">
+    <div class="slide-number">4 / 8</div>
+    <div class="dark-box">
+      <h2>Globalisierung & Kultur</h2>
+      <ul>
+        <li>Weltweite Vernetzung verbindet Menschen & Kulturen</li>
+        <li>Internationale Trends verbreiten sich schnell</li>
+        <li>Gefahr des Verlusts regionaler Traditionen</li>
+        <li>Kultureller Austausch fördert Verständnis</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg5">
+    <div class="slide-number">5 / 8</div>
+    <div class="dark-box">
+      <h2>Digitalisierung & Medien</h2>
+      <ul>
+        <li>Smartphones & soziale Netzwerke prägen den Alltag</li>
+        <li>KI verändert Bildung & Arbeit</li>
+        <li>Informationen verbreiten sich schneller denn je</li>
+        <li>Risiken: Fake News, Datenschutz, Manipulation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg6">
+    <div class="slide-number">6 / 8</div>
+    <div class="dark-box">
+      <h2>Demokratie & Verantwortung</h2>
+      <ul>
+        <li>Demokratie lebt von Meinungsfreiheit & Beteiligung</li>
+        <li>Medienkompetenz wird immer wichtiger</li>
+        <li>Bildung stärkt kritisches Denken</li>
+        <li>Respekt & Toleranz fördern Zusammenhalt</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg7">
+    <div class="slide-number">7 / 8</div>
+    <div class="dark-box">
+      <h2>Nachhaltigkeit & Zukunft</h2>
+      <ul>
+        <li>Klimawandel beeinflusst Kultur & Gesellschaft</li>
+        <li>Nachhaltiger Konsum gewinnt an Bedeutung</li>
+        <li>Gesellschaftliche Verantwortung wächst</li>
+        <li>Kultur kann Veränderungen positiv beeinflussen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide bg8">
+    <div class="slide-number">8 / 8</div>
+    <div class="dark-box">
+      <h2>Fazit</h2>
+      <ul>
+        <li>Kultur & Gesellschaft stehen im Wandel</li>
+        <li>Digitalisierung & Globalisierung bieten Chancen und Risiken</li>
+        <li>Vielfalt, Bildung & Demokratie bleiben zentrale Werte</li>
+        <li>Die Zukunft hängt von verantwortungsvollem Handeln ab</li>
+      </ul>
+
+      <br><br>
+
+    
+  </section>
+
+  <button class="next-btn" onclick="nextSlide()">Nächste Seite →</button>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add('active');
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+      nextSlide();
+    }
+  });
+</script>
+
+</body>
+</html>

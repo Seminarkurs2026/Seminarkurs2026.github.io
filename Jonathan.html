@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wirtschaftlich Politische Aspekte</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:black;
+    color:white;
+}
+
+.presentation{
+    width:100vw;
+    height:100vh;
+    position:relative;
+}
+
+.slide{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:70px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+    opacity:0;
+    transform:translateX(100px);
+    transition:all .5s ease;
+    pointer-events:none;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:all;
+}
+
+.dark-box{
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(5px);
+    padding:30px;
+    border-radius:20px;
+    max-width:1100px;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+li,p{
+    font-size:1.5rem;
+    line-height:1.8;
+}
+
+ul{
+    margin-left:30px;
+}
+
+.slide-number{
+    position:absolute;
+    top:20px;
+    right:auto;
+    left:25px;
+    
+}
+
+.next-btn{
+    position:absolute;
+    right:25px;
+    bottom:25px;
+
+    padding:15px 30px;
+    border-radius:12px;
+    border:2px solid white;
+
+    background:rgba(255,255,255,.15);
+    color:white;
+
+    cursor:pointer;
+    transition:.3s;
+    z-index:1000;
+}
+
+.next-btn:hover{
+    background:white;
+    color:black;
+}
+
+/* hier hintergrund 1 */
+.bg1{
+    background-image:url(Bilder/Inhalt_lila.png);
+}
+
+/* hier hintergrund 2 */
+.bg2{
+    background-image:url(Bilder/Inhalt_grün.png);
+}
+
+/* hier hintergrund 3 */
+.bg3{
+    background-image:url(Bilder/Inhalt_rot.png);
+}
+
+/* hier hintergrund 4 */
+.bg4{
+    background-image:url(Bilder/Politik.png);
+}
+
+/* hier hintergrund 5 */
+.bg5{
+    background-image:url(Bilder/Überwachung.png);
+}
+
+/* hier hintergrund 6 */
+.bg6{
+    background-image:url(Bilder/Überwachung.png);
+}
+
+/* hier hintergrund 7 */
+.bg7{
+    background-image:url(Bilder/Inhalt_dunkel-blau.png);
+}
+
+/* hier hintergrund 8 */
+.bg8{
+    background-image:url(Bilder/Inhalt_rot.png);
+}
+
+/* hier hintergrund 9 */
+.bg9{
+    background-image:url(Bilder/Inhalt_gelb.png);
+}
+
+@media(max-width:900px){
+
+    .slide{
+        padding:35px;
+    }
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    li,p{
+        font-size:1.1rem;
+    }
+}
+
+.home-btn{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    padding:12px 24px;
+
+    border:none;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.3s ease;
+    z-index:1001;
+
+    border:2px solid rgba(255,255,255,0.4);
+}
+
+.home-btn:hover{
+    transform:scale(1.05);
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<div class="presentation">
+
+    <button class="home-btn" onclick="window.location.href='index.html'">
+    🏠 Home
+    </button>
+
+    <section class="slide bg1 active">
+        <div class="slide-number">1 / 9</div>
+        <div class="dark-box">
+            <h1>Wirtschaftlich Politische Aspekte</h1>
+            <p>
+                Leitfrage:<br>
+                „Ist Chinas wirtschaftlicher Erfolg ohne politische Kontrolle
+                und umfassende Überwachung denkbar?“
+            </p>
+            <br>
+            <p><strong>Jonathan Franke – Seminarkurs</strong></p>
+        </div>
+    </section>
+
+    <section class="slide bg2">
+        <div class="slide-number">2 / 9</div>
+        <div class="dark-box">
+            <h2>Einführung</h2>
+            <ul>
+                <li>China ist das zweitgrößte Wirtschaftsland der Welt.</li>
+                <li>Über 1,4 Milliarden Einwohner.</li>
+                <li>Regiert von der Kommunistischen Partei Chinas.</li>
+                <li>Starker wirtschaftlicher Aufstieg seit den Reformen ab 1978.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg3">
+        <div class="slide-number">3 / 9</div>
+        <div class="dark-box">
+            <h2>Chinas Wirtschaft</h2>
+            <ul>
+                <li>Führend in Produktion und Export.</li>
+                <li>Große Unternehmen wie Huawei, BYD und Alibaba Group.</li>
+                <li>Wichtiger Handelspartner für Europa und Deutschland.</li>
+                <li>Hohe Investitionen in Technologie und Infrastruktur.</li>
+            </ul>
+
+            <br>
+
+            <h2>Vorteile</h2>
+            <ul>
+                <li>Schnelle Entscheidungen.</li>
+                <li>Langfristige Wirtschaftsplanung.</li>
+                <li>Große staatliche Investitionsprogramme.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg4">
+        <div class="slide-number">4 / 9</div>
+        <div class="dark-box">
+            <h2>Das politische System</h2>
+
+            <ul>
+                <li>Einparteienstaat unter der Kommunistischen Partei Chinas.</li>
+                <li>Keine freien nationalen Wahlen wie in Deutschland.</li>
+                <li>Medien und Internet werden staatlich kontrolliert.</li>
+                <li>Politische Opposition ist stark eingeschränkt.</li>
+            </ul>
+
+            <br>
+
+            <h2>Ziel der Regierung</h2>
+
+            <ul>
+                <li>Stabilität.</li>
+                <li>Wirtschaftswachstum.</li>
+                <li>Erhalt der Macht der Partei.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg5">
+        <div class="slide-number">5 / 9</div>
+        <div class="dark-box">
+            <h2>Überwachung in China</h2>
+
+            <ul>
+                <li>Millionen Überwachungskameras im öffentlichen Raum.</li>
+                <li>Einsatz von Gesichtserkennung.</li>
+                <li>Kontrolle von Internet und sozialen Medien.</li>
+                <li>Digitale Datensammlung durch Apps und Plattformen.</li>
+            </ul>
+
+            <br>
+
+            <h2>Begründung der Regierung</h2>
+
+            <ul>
+                <li>Kriminalitätsbekämpfung.</li>
+                <li>Öffentliche Sicherheit.</li>
+                <li>Soziale Stabilität.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg6">
+        <div class="slide-number">6 / 9</div>
+        <div class="dark-box">
+            <h2>Chancen der Überwachung</h2>
+
+            <ul>
+                <li>Schnellere Aufklärung von Straftaten.</li>
+                <li>Höhere Sicherheit an öffentlichen Orten.</li>
+                <li>Effizientere Verwaltung großer Städte.</li>
+                <li>Unterstützung bei Verkehrs- und Infrastrukturplanung.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg7">
+        <div class="slide-number">7 / 9</div>
+        <div class="dark-box">
+            <h2>Kritik an der Überwachung</h2>
+
+            <ul>
+                <li>Eingriff in die Privatsphäre.</li>
+                <li>Weniger Meinungsfreiheit.</li>
+                <li>Gefahr des Machtmissbrauchs.</li>
+                <li>Menschenrechtsorganisationen kritisieren die umfassende Kontrolle.</li>
+            </ul>
+
+            <br>
+
+            <h2>Diskussionspunkt</h2>
+
+            <p>
+                Wo liegt die Grenze zwischen Sicherheit und Freiheit?
+            </p>
+        </div>
+    </section>
+
+    <section class="slide bg8">
+        <div class="slide-number">8 / 9</div>
+        <div class="dark-box">
+            <h2>Bewertung</h2>
+
+            <ul>
+                <li>Wirtschaftlicher Erfolg kann auch ohne westliche Demokratie möglich sein.</li>
+                <li>Politische Kontrolle und Überwachung spielen eine wichtige Rolle.</li>
+                <li>Wie viel Freiheit darf für Sicherheit geopfert werden?</li>
+                <li>Ist dieses Modell langfristig erfolgreich?</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide bg9">
+        <div class="slide-number">9 / 9</div>
+        <div class="dark-box">
+            <h2>Antwort auf die Leitfrage</h2>
+
+            <p>
+                Chinas wirtschaftlicher Erfolg hängt teilweise mit der politischen
+                Kontrolle und der starken Rolle des Staates zusammen.
+            </p>
+
+            <br>
+
+            <p>
+                Die umfassende Überwachung trägt aus Sicht der Regierung zur
+                Stabilität bei, wird jedoch wegen der Einschränkung von
+                Freiheitsrechten stark kritisiert.
+            </p>
+
+            <br>
+
+            <p>
+                Ob dieses Modell langfristig erfolgreich bleibt,
+                ist weiterhin umstritten.
+            </p>
+        </div>
+    </section>
+
+    <button class="next-btn" onclick="nextSlide()">
+        Nächste Seite →
+    </button>
+
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function nextSlide() {
+
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add('active');
+}
+
+document.addEventListener('keydown', (e) => {
+
+    if(e.key === 'ArrowRight' || e.key === ' '){
+        nextSlide();
+    }
+});
+</script>
+
+</body>
+</html>
+

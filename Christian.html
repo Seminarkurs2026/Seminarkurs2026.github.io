@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technologische und gesellschaftliche Aspekte – China</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+      background: #111;
+      color: white;
+    }
+
+    .presentation {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.5s ease;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+    }
+
+    p, li {
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      margin-top: 40px;
+      padding: 25px;
+      border-left: 6px solid white;
+      background: rgba(255,255,255,0.1);
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+
+    .next-btn {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid white;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .next-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .slide-number {
+     position:absolute;
+    top:20px;
+    right:auto;
+    left:25px;
+    }
+
+    /* hier hintergrund 1 */
+    .bg1 {
+      background-image: url(Bilder/Titelfolie.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 2 */
+    .bg2 {
+      background-image: url(Bilder/Agenda.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 3 */
+    .bg3 {
+      background-image: url(Bilder/Inhalt_gelb.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 4 */
+    .bg4 {
+      background-image: url(Bilder/Inhalt_rot.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 5 */
+    .bg5 {
+      background-image: url(Bilder/Inhalt_blau.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 6 */
+    .bg6 {
+      background-image: url(Bilder/Inhalt_grün.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* hier hintergrund 7 */
+    .bg7 {
+      background-image: url(Bilder/Inhalt_dunkel-blau.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .bg8 {
+      background-image: url(Bilder/Inhalt_lila.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p, li {
+        font-size: 1.1rem;
+      }
+
+      .slide {
+        padding: 35px;
+      }
+    }
+
+    .home-btn{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    padding:12px 24px;
+
+    border:none;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.3s ease;
+    z-index:1001;
+
+    border:2px solid rgba(255,255,255,0.4);
+}
+
+.home-btn:hover{
+    transform:scale(1.05);
+    background:white;
+    color:black;
+}
+  </style>
+</head>
+<body>
+
+  <div class="presentation">
+    <button class="home-btn" onclick="window.location.href='index.html'">
+    🏠 Home
+    </button>
+    <section class="slide bg1 active">
+      <div class="slide-number">1 / 8</div>
+      <p class="subtitle">Seminarkurs TG J1</p>
+      <h1>Technologische- und gesellschaftliche Aspekte</h1>
+      <p>Auswirkungen des technischen Fortschrittes, China</p>
+      <br>
+      <p><strong>Christian Voigt</strong></p>
+    </section>
+
+    <section class="slide bg2">
+      <div class="slide-number">2 / 8</div>
+      <h2>Agenda</h2>
+      <ul>
+        <li>Der technologische Imperativ im chinesischen Herrschaftssystem</li>
+        <li>Outsourcing der Überwachung</li>
+        <li>Digitale Infrastruktur und algorithmische Governance</li>
+        <li>Das Social-Credit-System (SCS)</li>
+        <li>Normative Gegensätze – 2 Welten, 2 Ansichten</li>
+        <li>Synthese: Frieden durch totale Kontrolle?</li>
+      </ul>
+    </section>
+
+    <section class="slide bg3">
+      <div class="slide-number">3 / 8</div>
+      <h2>Der technologische Imperativ</h2>
+      <ul>
+        <li>Symbiose aus Hochtechnologie und politischer Kontrolle</li>
+        <li>„Negativer Frieden“?</li>
+        <li>„Social Management“-Theorie</li>
+        <li>Big Data, KI und algorithmische Governance</li>
+        <li>Gibt es einen autoritären Frieden? – Beispiel China</li>
+      </ul>
+
+      <div class="question">
+        „Wie wird Frieden in China traditionell-gesellschaftlich,
+        politisch und technologisch geprägt, und welche Konflikte ergeben sich daraus?“
+      </div>
+    </section>
+
+    <section class="slide bg4">
+      <div class="slide-number">4 / 8</div>
+      <h2>Outsourcing der Überwachung</h2>
+      <ul>
+        <li>„Big Three“ – kooperative Firmen</li>
+        <li>Datenübergabe und Kooperation</li>
+        <li>Integration kommerzieller Dienste</li>
+        <li>Politische Kontrolle in Unternehmen</li>
+      </ul>
+    </section>
+
+    <section class="slide bg5">
+      <div class="slide-number">5 / 8</div>
+      <h2>Digitale Infrastruktur und Governance</h2>
+      <ul>
+        <li>Physische und digitale Überwachungsnetze</li>
+        <li>„Golden Shield“ & Great Firewall</li>
+        <li>Skynet & Sharp Eyes (Xue Liang)</li>
+        <li>Grid Management</li>
+        <li>Vernetzte Intelligenz</li>
+        <li>„City Brains“ & Smart Cities</li>
+        <li>Polizei-Clouds & Predictive Policing</li>
+        <li>Kameras & Gesichtserkennung</li>
+        <li>Datensammlung & Analyse</li>
+        <li>Digitale Kontrolle im Alltag</li>
+      </ul>
+    </section>
+
+    <section class="slide bg6">
+      <div class="slide-number">6 / 8</div>
+      <h2>Das Social-Credit-System (SCS)</h2>
+      <ul>
+        <li>Lockmittel</li>
+        <li>„Nudging“</li>
+        <li>Gamification der Konformität</li>
+        <li>Zwang durch Strafen</li>
+        <li>Joint Punishment & Incentives</li>
+        <li>Corporate Social Credit</li>
+      </ul>
+    </section>
+      <br><br>
+    <section class="slide bg7">
+      <div class="slide-number">7 / 8</div>
+      <h2>Normative Gegensätze</h2>
+      <ul>
+        <li>Datenschutzkonzepte</li>
+        <li>Westlicher Fokus vs. chinesischer Fokus</li>
+        <li>„Social Management“</li>
+        <li>Psychologische Auswirkungen</li>
+        <li>Konformitätsdruck & Selbstzensur</li>
+        <li>Das „User-Paradoxon“ in China</li>
+      </ul>
+    </section>
+
+    <section class="slide bg8">
+      <div class="slide-number">8 / 8</div>
+      <h2>Synthese: Frieden durch totale Kontrolle?</h2>
+      <div class="question">
+        Stabilität vs. Freiheit<br><br>
+        Führt technologischer Fortschritt zu einem nachhaltigen sozialen Frieden
+        oder zu einer schleichenden Erosion der menschlichen Würde?
+      </div>
+    </section>
+
+    <button class="next-btn" onclick="nextSlide()">Nächste Seite →</button>
+
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+
+      currentSlide++;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      }
+    });
+  </script>
+
+</body>
+</html>
